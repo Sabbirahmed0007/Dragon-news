@@ -1,5 +1,7 @@
 import React from 'react';
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/logo.png';
+import { format } from 'date-fns';
+
 
 const Header = () => {
     return (
@@ -8,12 +10,14 @@ const Header = () => {
                 <img className='w-90 ' src={logo} alt="" />
                 <p className='my-1 text-sm text-personal'>Journalism Without Fear or Favour</p> 
 
-                <p className='text-lg font-medium'>{new Date().toLocaleDateString("en-US", {
+                {/* <p className='text-lg font-medium'>{new Date().toLocaleDateString('en-us', {
                     weekday: "long",
                     month: "long",
                     day: "numeric",
                     year: "numeric",
-                })}</p>
+                })}</p> */}
+                <p className='text-lg font-medium'>{format(new Date(),'EEEE, MMMM dd, yyyy') }</p>
+                 
             </div>
         </div>
     );
