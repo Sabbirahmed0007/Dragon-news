@@ -6,6 +6,7 @@ import Error from '../Components/ErrorElement/Error';
 import Layout from '../Layout/Layout';
 import About from '../Pages/About/About';
 import Career from '../Pages/Career/Career';
+import CategoryNews from '../Components/Categories/CategoryNews';
 
 const Routes = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const Routes = createBrowserRouter([
                 index: true,
                 path: '/',
                 element:<Home></Home>
+            },
+            {
+                path: 'category/:id',
+                element: <CategoryNews></CategoryNews>,
             },
             {
                 path: '/about',

@@ -21,10 +21,10 @@ const Layout = () => {
                 <Navbar></Navbar>
                 </section>
             </header>
-            <main className='w-11/12 mx-auto my-3 '>
-                <aside><LeftAside></LeftAside></aside>
-                <section><Outlet></Outlet></section>
-                <aside><RightAside></RightAside></aside>
+            <main className='w-11/12 mx-auto my-5 grid grid-cols-1 lg:grid-cols-12  '>
+                <aside className='col-span-3'><LeftAside></LeftAside></aside>
+                <section className='col-span-6 min-h-screen'><Outlet></Outlet></section>
+                <aside className='col-span-3'><RightAside></RightAside></aside>
             </main>
             
         </div>
